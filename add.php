@@ -14,7 +14,7 @@ if($_POST){
         $prix = strip_tags($_POST['prix']);
         $nombre = strip_tags($_POST['nombre']);
 
-        $sql = 'INSERT INTO `liste` (`produit`, `prix`, `nombre`) VALUES (:produit, :prix, :nombre);';
+        $sql = 'INSERT INTO `liste` (`produit`, `prix`, `nombre`, `actif` ) VALUES (:produit, :prix, :nombre, 1);';
 
         $query = $db->prepare($sql);
 
